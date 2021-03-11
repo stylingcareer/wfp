@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <!--<WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" />
+    </WindowChrome.WindowChrome>-->
+    <!--<Window.Clip>
+        <RectangleGeometry Rect="0,0,742,492" RadiusX="25" RadiusY="25"/>
+    </Window.Clip>-->
+    <Grid>
+        <MediaElement Name="myMediaElement" HorizontalAlignment="Center" LoadedBehavior="Manual" MediaEnded="myMediaElement_MediaEnded" Source="file://d:/temp/wpfapp5/wpfapp5/Images/giphy.gif" Stretch="None"/>
+        <StackPanel x:Name="panel" HorizontalAlignment="Left" Height="135" Margin="358,111,0,0" VerticalAlignment="Top" Width="100" Background="White" Opacity="0.2" MouseEnter="panel_MouseEnter" MouseLeave="panel_MouseLeave">
+            <TextBlock Text="User" Margin="5,10,0,0" />
+            <TextBox Width="90" Height="20" />
+            <TextBlock Text="Password" Margin="5,10,0,0" />
+            <TextBox Width="90" Height="20" />
+            <Button Content="Login" Margin="0,15,0,0" HorizontalAlignment="Center" Click="Button_Login_Click"/>
+            <StackPanel.Clip>
+                <RectangleGeometry Rect="0,0,100,135" RadiusX="10" RadiusY="10"/>
+            </StackPanel.Clip>
+        </StackPanel>
+    </Grid>
+</Window>
